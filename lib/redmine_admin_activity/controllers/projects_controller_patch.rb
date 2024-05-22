@@ -105,7 +105,7 @@ module RedmineAdminActivity::Controllers
 
     def journalized_projects_deletion
       if Redmine::VERSION::MAJOR >= 5
-        return unless @project_to_destroy.present? && (@project_to_destroy.destroyed? || @project_to_destroy.scheduled_for_deletion?)
+        return unless @project_to_destroy.present? && @project_to_destroy.destroyed?
       else
         return unless @project_to_destroy.present? && @project_to_destroy.destroyed?
       end

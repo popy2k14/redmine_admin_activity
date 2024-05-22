@@ -7,7 +7,7 @@ module RedmineAdminActivity
         require_relative 'journalizable'
 
         require_relative 'controllers/projects_controller_patch'
-        require_relative 'jobs/destroy_project_job_patch'
+        # require_relative 'jobs/destroy_project_job_patch'
         require_relative 'controllers/issue_categories_controller_patch'
         require_relative 'controllers/members_controller_patch'
         require_relative 'controllers/principal_memberships_controller_patch'
@@ -31,7 +31,7 @@ module RedmineAdminActivity
         require_relative 'models/version_patch'
         require_relative 'models/custom_field_patch'
         require_relative 'models/user_patch'
-        require_relative 'models/issue_template_patch' if Redmine::Plugin.installed?(:redmine_templates)
+        # require_relative 'models/issue_template_patch' if Redmine::Plugin.installed?(:redmine_templates)
 
         require_relative 'helpers/projects_helper_patch'
         require_relative 'helpers/issues_helper_patch'
